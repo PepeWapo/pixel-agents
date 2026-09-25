@@ -4,9 +4,11 @@
   </a>
 </h1>
 
-<h2 align="center">The most playful way to orchestrate your agents</h2>
+<h2 align="center">La forma más divertida de orquestar a tus agentes</h2>
 
 <div align="center">
+
+[English](README.en.md) · **Español (Argentina)**
 
 [![version](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fpablodelucca%2F3cd28398fa4a2c0a636e1d51d41aee39%2Fraw%2Fversion.json)](https://github.com/pixel-agents-hq/pixel-agents/releases)
 [![marketplaces](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fpablodelucca%2F3cd28398fa4a2c0a636e1d51d41aee39%2Fraw%2Finstalls.json)](https://marketplace.visualstudio.com/items?itemName=pablodelucca.pixel-agents)
@@ -18,87 +20,146 @@
 </div>
 
 <div align="center">
-<a href="https://marketplace.visualstudio.com/items?itemName=pablodelucca.pixel-agents">🛒 VS Code Marketplace</a> • <a href="https://open-vsx.org/extension/pablodelucca/pixel-agents">🛒 Open VSX</a> • <a href="https://www.npmjs.com/package/pixel-agents">📦 npm</a> • <a href="https://discord.gg/Yk7jXebv9H">👾 Discord</a> • <a href="https://github.com/pixel-agents-hq/pixel-agents/discussions">💬 Discussions</a> • <a href="CONTRIBUTING.md">🤝 Contributing</a> • <a href="CHANGELOG.md">📋 Changelog</a>
+<a href="https://marketplace.visualstudio.com/items?itemName=pablodelucca.pixel-agents">🛒 VS Code Marketplace</a> • <a href="https://open-vsx.org/extension/pablodelucca/pixel-agents">🛒 Open VSX</a> • <a href="https://www.npmjs.com/package/pixel-agents">📦 npm</a> • <a href="https://discord.gg/Yk7jXebv9H">👾 Discord</a> • <a href="https://github.com/pixel-agents-hq/pixel-agents/discussions">💬 Discussions</a> • <a href="CONTRIBUTING.md">🤝 Cómo contribuir</a> • <a href="CHANGELOG.md">📋 Changelog</a>
 </div>
 
 <br/>
 
-Pixel Agents turns the AI coding agents running in your terminals into animated pixel-art characters working in a tiny office. They walk to their desks, sit down, type when they're editing files, read when they're searching, and flag you visually when they're stuck waiting for input.
+> **Fork de [@PepeWapo](https://github.com/PepeWapo)** del proyecto [pixel-agents-hq/pixel-agents](https://github.com/pixel-agents-hq/pixel-agents). Esta versión en español y la sección [Cambios de este fork](#cambios-de-este-fork) son propias del fork; el resto del contenido sigue al README original.
 
-It ships in two forms from the same codebase:
+Pixel Agents convierte a los agentes de IA que tenés corriendo en tus terminales en personajes pixel art animados que trabajan en una oficina diminuta. Caminan hasta sus escritorios, se sientan, tipean cuando están editando archivos, leen cuando están buscando y te avisan visualmente cuando se quedan esperando una respuesta tuya.
 
-- **VS Code extension** — [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=pablodelucca.pixel-agents) and [Open VSX](https://open-vsx.org/extension/pablodelucca/pixel-agents). Agents launch into VS Code terminals; characters render in the panel area.
-- **Standalone CLI** — `npx pixel-agents` starts a local server and serves the same office as a browser app, useful for tmux, remote, and non-VS Code workflows.
+Se distribuye en dos formas desde el mismo código:
 
-The architecture is fully agent-agnostic and editor-agnostic: a typed `HookProvider` interface defines the integration boundary so adding a new AI tool is a single subdirectory of code. Claude Code is the reference implementation today; Codex, Gemini, Cursor, and others are on the roadmap.
+- **Extensión de VS Code** — [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=pablodelucca.pixel-agents) y [Open VSX](https://open-vsx.org/extension/pablodelucca/pixel-agents). Los agentes se lanzan en terminales de VS Code y los personajes se dibujan en el panel inferior.
+- **CLI standalone** — `npx pixel-agents` levanta un servidor local y sirve la misma oficina como una app de navegador. Sirve para tmux, trabajo remoto y flujos que no usan VS Code.
 
-![Pixel Agents screenshot](webview-ui/public/office.png)
+La arquitectura es totalmente agnóstica al agente y al editor: una interfaz `HookProvider` tipada define el límite de la integración, así que sumar una herramienta de IA nueva es agregar una sola subcarpeta de código. Hoy la implementación de referencia es Claude Code; Codex, Gemini, Cursor y otras están en la hoja de ruta.
 
-## Features
+![Captura de Pixel Agents](webview-ui/public/office.png)
 
-- **One agent, one character** — every Claude Code terminal gets its own animated character
-- **Live activity tracking** — characters animate based on what the agent is actually doing (writing, reading, running commands)
-- **Office layout editor** — design your office with floors, walls, and furniture using a built-in editor
-- **Speech bubbles** — visual indicators when an agent is waiting for input or awaiting permission
-- **Sound notifications** — optional chimes when an agent finishes its turn or requests permission
-- **Sub-agents and Agent Teams** — see ephemeral sub-agents and persistent Claude teammates as separate characters, including team roles and lifecycle changes
-- **Persistent layouts** — your office design is saved and shared across VS Code windows
-- **Shared layout and assets** — import/export layouts and load external character, pet, and furniture packs
-- **Areas** — paint named areas onto the office, map workspace folders to them, and new agents sit inside the areas mapped to their folder
-- **Diverse characters** — 6 diverse characters. These are based on the amazing work of [JIK-A-4, Metro City](https://jik-a-4.itch.io/metrocity-free-topdown-character-pack).
+## Funcionalidades
+
+- **Un agente, un personaje** — cada terminal de Claude Code tiene su propio personaje animado
+- **Seguimiento de actividad en vivo** — los personajes se animan según lo que el agente está haciendo de verdad (escribir, leer, ejecutar comandos)
+- **Editor de layout de la oficina** — diseñá tu oficina con pisos, paredes y muebles desde un editor integrado
+- **Globos de diálogo** — indicadores visuales cuando un agente espera una respuesta o un permiso
+- **Notificaciones sonoras** — campanitas opcionales cuando un agente termina su turno o pide permiso
+- **Sub-agentes y Agent Teams** — los sub-agentes efímeros y los compañeros persistentes de Claude aparecen como personajes separados, con sus roles y cambios de ciclo de vida
+- **Layouts persistentes** — el diseño de tu oficina se guarda y se comparte entre ventanas de VS Code
+- **Layout y assets compartidos** — importá y exportá layouts y cargá paquetes externos de personajes, mascotas y muebles
+- **Áreas** — pintá áreas con nombre en la oficina, asociá carpetas de trabajo a ellas y los agentes nuevos se sientan dentro de las áreas asociadas a su carpeta
+- **Personajes diversos** — 6 personajes distintos, basados en el excelente trabajo de [JIK-A-4, Metro City](https://jik-a-4.itch.io/metrocity-free-topdown-character-pack).
 
 <p align="center">
-  <img src="webview-ui/public/characters.png" alt="Pixel Agents characters" width="320" height="72" style="image-rendering: pixelated;">
+  <img src="webview-ui/public/characters.png" alt="Personajes de Pixel Agents" width="320" height="72" style="image-rendering: pixelated;">
 </p>
 
-## Where This Is Going
+## Cambios de este fork
 
-The vision is: play a game, build a product. Two goals follow from it: to build a familiar, intuitive interface for running and orchestrating a lot of agents; and to make the hours you spend doing it feel less like administration and more like play.
+Además de todo lo del proyecto original, este fork agrega:
 
-Roughly three stages get there:
+- **App de escritorio (Electron)** — la carpeta [`desktop/`](desktop/) contiene un envoltorio que corre Pixel Agents como una aplicación de escritorio con ventana propia, sin abrir el navegador.
+  - Lanza el servidor standalone (`dist/cli.js`) como proceso hijo, en un **puerto efímero** y solo sobre `127.0.0.1`, con un **token nuevo en cada arranque**.
+  - Lee la URL con el token desde la salida del servidor y la carga en la ventana. Como la ventana no tiene barra de direcciones, el **token nunca queda a la vista** ni en el historial de un navegador.
+  - Es de **instancia única**: si ya está abierta, un segundo lanzamiento trae la ventana al frente.
+  - Recuerda el tamaño y la posición de la ventana.
+  - Los links externos se abren en tu navegador; la ventana no puede navegar fuera de la oficina.
+  - Al cerrar la ventana se apaga también el servidor.
+  - No modifica el código del servidor, así que traer cambios de `upstream` no debería dar conflictos.
+- **Acceso directo en el escritorio** — `desktop/create-shortcut.ps1` crea un acceso directo «Pixel Agents» en el escritorio de Windows (con ícono) que abre la app sin mostrar una consola.
+- **Build portable opcional** — la configuración de `electron-builder` deja preparado un `.exe` portable para Windows (`npm run dist` dentro de `desktop/`). Está configurado pero no fue probado.
 
-1. **Everywhere, with everything.** Today it's Claude Code in VS Code or the browser. It should be whatever agent you run, wherever you work. A new CLI is a subdirectory, not a rewrite — this is where help is most useful right now.
-2. **Actually a game.** Health bars for rate limits and token budgets. Scores for whatever you care about. Furniture that _does_ things. Offices you open like save files, one per project.
-3. **Expand the orchestration frontier.** Orchestrator characters. Form a team by dragging a box around them. Hand work between agents. Point them at a board and let them pick up tasks themselves.
-
-Most of this is still ahead. See [Issues](https://github.com/pixel-agents-hq/pixel-agents/issues) and [Discussions](https://github.com/pixel-agents-hq/pixel-agents/discussions) for what's open, and [CONTRIBUTING.md](CONTRIBUTING.md) to jump in.
-
-## Requirements
-
-- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) installed and configured
-- **VS Code extension:** VS Code 1.105.0 or later
-- **Standalone CLI:** Node.js 20 or later
-- Windows, Linux, or macOS
-
-## Getting Started
-
-### VS Code extension
-
-1. Install Pixel Agents from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=pablodelucca.pixel-agents) or [Open VSX](https://open-vsx.org/extension/pablodelucca/pixel-agents).
-2. Open the **Pixel Agents** panel beside the terminal.
-3. Click **+ Agent** to launch Claude Code. In a multi-root workspace, select the folder first.
-
-To use Claude with `--dangerously-skip-permissions`, hover over **+ Agent** to find the **Skip permissions mode** button. Only use this when you accept the security implications.
-
-Pixel Agents also detects Claude sessions started outside the extension. Turn on **Settings → Watch All Sessions** to include sessions from other workspaces.
-
-### Standalone CLI
-
-Run Pixel Agents from the workspace whose Claude sessions you want to see:
+### Usar la app de escritorio
 
 ```bash
-cd /path/to/your/project
+# desde la raíz del repo: compilar el servidor y el webview
+npm install
+npm run build
+
+# instalar Electron y abrir la app
+cd desktop
+npm install
+npm start
+```
+
+Para crear el acceso directo en el escritorio de Windows:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File desktop\create-shortcut.ps1
+```
+
+Para generar el `.exe` portable (queda en `desktop/release/`):
+
+```bash
+npm run build
+cd desktop
+npm run dist
+```
+
+> **Nota:** la app usa el `dist/` compilado de la raíz del repo, así que cada vez que cambies el código (propio o ya auditado de `upstream`) acordate de volver a correr `npm run build`.
+
+### Sincronizar con el proyecto original
+
+Este fork **no trae cambios de `upstream` automáticamente**: cada cambio se revisa antes de incorporarlo.
+
+```bash
+git remote add upstream https://github.com/pixel-agents-hq/pixel-agents.git   # solo la primera vez
+git fetch upstream
+git log --oneline main..upstream/main        # qué commits hay de novedad
+git diff main...upstream/main                # revisar los cambios antes de integrarlos
+```
+
+Si algo de `main` de este fork sirve para el proyecto original, se propone abriendo un pull request a [pixel-agents-hq/pixel-agents](https://github.com/pixel-agents-hq/pixel-agents).
+
+## Hacia dónde va esto
+
+La visión es: jugar un juego, construir un producto. De ahí salen dos objetivos: armar una interfaz familiar e intuitiva para correr y orquestar muchísimos agentes, y lograr que las horas que le dedicás se sientan menos como administración y más como juego.
+
+Más o menos tres etapas nos llevan hasta ahí:
+
+1. **En todos lados, con todo.** Hoy es Claude Code en VS Code o en el navegador. Debería funcionar con el agente que uses, donde trabajes. Una CLI nueva es una subcarpeta, no una reescritura — acá es donde más ayuda se necesita ahora.
+2. **Un juego de verdad.** Barras de vida para los límites de uso y los presupuestos de tokens. Puntajes para lo que te importe. Muebles que _hagan_ cosas. Oficinas que abrís como archivos de guardado, una por proyecto.
+3. **Ampliar la frontera de la orquestación.** Personajes orquestadores. Armar un equipo arrastrando un recuadro alrededor de ellos. Pasar trabajo de un agente a otro. Apuntarlos a un tablero y dejar que tomen tareas solos.
+
+La mayor parte de esto todavía está por delante. Mirá los [Issues](https://github.com/pixel-agents-hq/pixel-agents/issues) y las [Discussions](https://github.com/pixel-agents-hq/pixel-agents/discussions) para ver qué hay abierto, y [CONTRIBUTING.md](CONTRIBUTING.md) para sumarte.
+
+## Requisitos
+
+- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) instalado y configurado
+- **Extensión de VS Code:** VS Code 1.105.0 o superior
+- **CLI standalone:** Node.js 20 o superior
+- Windows, Linux o macOS
+
+## Primeros pasos
+
+### Extensión de VS Code
+
+1. Instalá Pixel Agents desde el [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=pablodelucca.pixel-agents) o desde [Open VSX](https://open-vsx.org/extension/pablodelucca/pixel-agents).
+2. Abrí el panel **Pixel Agents** al lado de la terminal.
+3. Hacé clic en **+ Agent** para lanzar Claude Code. En un workspace con varias carpetas raíz, elegí primero la carpeta.
+
+Para usar Claude con `--dangerously-skip-permissions`, pasá el mouse por arriba de **+ Agent** y vas a encontrar el botón **Skip permissions mode**. Usalo solo si aceptás las implicancias de seguridad.
+
+Pixel Agents también detecta sesiones de Claude iniciadas fuera de la extensión. Activá **Settings → Watch All Sessions** para incluir sesiones de otros workspaces.
+
+### CLI standalone
+
+Corré Pixel Agents desde el workspace cuyas sesiones de Claude querés ver:
+
+```bash
+cd /ruta/a/tu/proyecto
 npx pixel-agents
 ```
 
-The CLI chooses a free local port and prints the URL. Standalone does not launch Claude for you; start Claude Code in a terminal for the same workspace. To install the command globally instead:
+La CLI elige un puerto local libre e imprime la URL. El modo standalone no lanza Claude por vos; iniciá Claude Code en una terminal del mismo workspace. Para instalar el comando de forma global:
 
 ```bash
 npm install --global pixel-agents
 pixel-agents
 ```
 
-Use a fixed address or port when needed:
+Si necesitás una dirección o un puerto fijo:
 
 ```bash
 pixel-agents --port 3100
@@ -106,60 +167,63 @@ pixel-agents --host 127.0.0.1 --port 3100
 pixel-agents --help
 ```
 
-The default bind address is `127.0.0.1`. Binding to `0.0.0.0` exposes the UI and WebSocket to the local network; do this only on a trusted network.
+La dirección por defecto es `127.0.0.1`. Si la enlazás a `0.0.0.0`, la UI y el WebSocket quedan expuestos a la red local; hacelo solo en una red de confianza.
 
-Open the URL the CLI prints - it carries a `?token=` for this session. Any browser can watch the office without it, but installing or removing hooks (which edits your agent tool's own settings file, like the `~/.claude/settings.json`) is only offered to a session that has the token, so an untokened client on the network cannot approve it. Open the bare address instead and the hooks toggle in Settings is refused, and reports the actual install state rather than appearing to work.
+Abrí la URL que imprime la CLI: trae un `?token=` propio de esa sesión. Cualquier navegador puede mirar la oficina sin el token, pero instalar o quitar hooks (lo que edita el archivo de configuración de tu herramienta de agentes, como `~/.claude/settings.json`) solo se ofrece a una sesión que tenga el token, así que un cliente sin token en la red no puede aprobarlo. Si abrís la dirección sin el token, el interruptor de hooks en Settings se rechaza y muestra el estado real de la instalación en lugar de aparentar que funcionó.
 
-Treat that URL as a secret: the token is a bearer capability, not proof of being local. Whoever holds it can approve the hook install from anywhere the server is reachable — so don't paste the URL into a shared channel, and note that it also lands in your browser history and (unredacted) in the server's own request log.
+Tratá esa URL como un secreto: el token es una capacidad al portador (_bearer_), no una prueba de que estás en local. Quien lo tenga puede aprobar la instalación de hooks desde cualquier lugar donde el servidor sea alcanzable, así que no pegues la URL en un canal compartido, y tené en cuenta que además queda en el historial de tu navegador y (sin redactar) en el log de requests del propio servidor.
 
-Pass `--no-terminal` to disable the embedded terminal — watch agents without launching or attaching to them from the browser.
+Pasá `--no-terminal` para deshabilitar la terminal embebida: así mirás a los agentes sin lanzarlos ni conectarte a ellos desde el navegador.
 
-### Running the extension and standalone together
+> Si preferís no manejar la URL con token a mano, usá la [app de escritorio de este fork](#cambios-de-este-fork), que la maneja internamente.
 
-The extension and standalone CLI can run at the same time. Each server registers under `~/.pixel-agents/servers/`; the hook script sends events to all active registrations. VS Code and standalone keep separate agents, seats, and settings while using the shared office layout.
+### Correr la extensión y el standalone a la vez
 
-Stop a standalone server with **Ctrl+C**. It removes only its own registration.
+La extensión y la CLI standalone pueden correr al mismo tiempo. Cada servidor se registra en `~/.pixel-agents/servers/`; el script de hooks manda los eventos a todos los registros activos. VS Code y standalone mantienen agentes, asientos y configuraciones separados, pero comparten el layout de la oficina.
 
-## Customizing the Office
+Para detener un servidor standalone, usá **Ctrl+C**. Solo elimina su propio registro.
 
-Click **Layout** to edit the office:
+## Personalizar la oficina
 
-- Paint floor patterns and walls, with color and contrast controls.
-- Place, rotate, recolor, select, and remove furniture.
-- Paint auto-tiling carpets and customize their main and accent colors.
-- Add animated pets; click a pet in the office to interact with it.
-- Create named **Areas**, paint their tiles, and assign workspace folders to them.
-- Undo/redo changes, then import or export the complete layout as JSON.
+Hacé clic en **Layout** para editar la oficina:
 
-Layouts can grow to 64×64 tiles by clicking the ghost border outside the current grid.
+- Pintá patrones de piso y paredes, con controles de color y contraste.
+- Colocá, rotá, recoloreá, seleccioná y eliminá muebles.
+- Pintá alfombras con auto-tiling y personalizá sus colores principal y de acento.
+- Sumá mascotas animadas; hacé clic en una mascota en la oficina para interactuar con ella.
+- Creá **Áreas** con nombre, pintá sus tiles y asignales carpetas de trabajo.
+- Deshacé y rehacé cambios, y luego importá o exportá el layout completo como JSON.
 
-### Office assets
+Los layouts pueden crecer hasta 64×64 tiles haciendo clic en el borde fantasma que rodea la grilla actual.
 
-Bundled furniture, floors, walls, carpets, characters, and pets live under `webview-ui/public/assets/`. Furniture manifests describe sprites, rotation groups, state groups, and animation frames.
+### Assets de la oficina
 
-Use **Settings → Add Asset Directory** to load external characters, pets, and furniture. See [docs/external-assets.md](docs/external-assets.md) for furniture directory structure and manifest details. The visual asset manager at `scripts/asset-manager.html` helps create furniture manifests.
+Los muebles, pisos, paredes, alfombras, personajes y mascotas incluidos viven en `webview-ui/public/assets/`. Los manifiestos de muebles describen sprites, grupos de rotación, grupos de estado y cuadros de animación.
 
-## How It Works
+Usá **Settings → Add Asset Directory** para cargar personajes, mascotas y muebles externos. Mirá [docs/external-assets.md](docs/external-assets.md) para conocer la estructura de directorios de muebles y los detalles del manifiesto. El administrador visual de assets en `scripts/asset-manager.html` ayuda a crear manifiestos de muebles.
 
-Pixel Agents uses two Claude Code detection paths:
+## Cómo funciona
 
-- **Hooks mode** (default) — a hook script receives Claude events such as `SessionStart`, `PreToolUse`, `PermissionRequest`, and `Stop`. It discovers active Pixel Agents servers and sends authenticated events to each one.
-- **Heuristic mode** (fallback) — when hooks are unavailable, the runtime infers agent status by scanning Claude's JSONL session transcripts under `~/.claude/projects/`. Transcripts are also read in hooks mode for details not present in an event.
+Pixel Agents usa dos caminos para detectar a Claude Code:
 
-The Claude provider normalizes both sources into a shared `AgentEvent` model. `AgentRuntime` updates the central state store, and the active transport sends typed messages to the React webview. The office renders through Canvas 2D with pathfinding and character state machines.
+- **Modo hooks** (por defecto) — un script de hooks recibe eventos de Claude como `SessionStart`, `PreToolUse`, `PermissionRequest` y `Stop`. Descubre los servidores de Pixel Agents activos y les envía eventos autenticados a cada uno.
+- **Modo heurístico** (alternativo) — cuando los hooks no están disponibles, el runtime infiere el estado del agente escaneando los transcripts JSONL de las sesiones de Claude en `~/.claude/projects/`. Los transcripts también se leen en modo hooks para obtener detalles que no vienen en un evento.
 
-Pixel Agents does not modify Claude Code. Its hook configuration and persistent data live under `~/.claude/` and `~/.pixel-agents/` respectively.
+El provider de Claude normaliza ambas fuentes en un modelo `AgentEvent` compartido. `AgentRuntime` actualiza el store de estado central y el transporte activo envía mensajes tipados al webview de React. La oficina se renderiza con Canvas 2D, con búsqueda de caminos y máquinas de estado para los personajes.
 
-### Architecture
+Pixel Agents no modifica Claude Code. Su configuración de hooks y sus datos persistentes viven en `~/.claude/` y `~/.pixel-agents/` respectivamente.
 
-- **`core/`** — provider, adapter, transport, schema, and AsyncAPI message contracts with no runtime side effects.
-- **`server/`** — shared Fastify server, agent runtime, persistence, Claude provider, transcript scanning, and standalone CLI.
-- **`adapters/vscode/`** — the VS Code adapter: terminal, persistence, and webview bridge.
-- **`webview-ui/`** — React 19, Vite, Canvas 2D, and adapter-specific transports for VS Code and browser WebSocket clients.
+### Arquitectura
 
-The extension and CLI are bundled with esbuild; the webview is built with Vite. Unit tests use Vitest and Node's test runner, and end-to-end coverage uses Playwright against VS Code and standalone.
+- **`core/`** — contratos de provider, adapter, transporte, esquemas y mensajes AsyncAPI, sin efectos secundarios en runtime.
+- **`server/`** — servidor Fastify compartido, runtime de agentes, persistencia, provider de Claude, escaneo de transcripts y la CLI standalone.
+- **`adapters/vscode/`** — el adapter de VS Code: terminal, persistencia y puente con el webview.
+- **`webview-ui/`** — React 19, Vite, Canvas 2D y transportes específicos para VS Code y para clientes WebSocket en el navegador.
+- **`desktop/`** — _(propio de este fork)_ envoltorio Electron que corre el servidor standalone y muestra la oficina en una ventana de escritorio.
 
-## Development
+La extensión y la CLI se empaquetan con esbuild; el webview se compila con Vite. Los tests unitarios usan Vitest y el test runner de Node, y la cobertura end-to-end usa Playwright contra VS Code y contra standalone.
+
+## Desarrollo
 
 ```bash
 git clone https://github.com/pixel-agents-hq/pixel-agents.git
@@ -168,13 +232,13 @@ npm install
 npm run build
 ```
 
-Press **F5** in VS Code to launch the Extension Development Host. To run the standalone bundle built from source:
+Presioná **F5** en VS Code para lanzar el Extension Development Host. Para correr el bundle standalone compilado desde el código fuente:
 
 ```bash
 node dist/cli.js
 ```
 
-Common checks:
+Chequeos habituales:
 
 ```bash
 npm run check-types
@@ -183,11 +247,13 @@ npm test
 npm run e2e
 ```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the development workflow and [e2e/README.md](e2e/README.md) for the end-to-end suite.
+Mirá [CONTRIBUTING.md](CONTRIBUTING.md) para el flujo de desarrollo y [e2e/README.md](e2e/README.md) para la suite end-to-end.
 
-### Hosted Test Reports
+> Los commits pasan por un hook de pre-commit que corre `gitleaks` para escanear secretos, así que necesitás tenerlo instalado (en Windows: `winget install Gitleaks.Gitleaks`).
 
-Build the combined Allure report locally and stage it for Vercel:
+### Reportes de tests alojados
+
+Generá el reporte combinado de Allure en local y prepará el resultado para Vercel:
 
 ```bash
 npm run test
@@ -196,24 +262,25 @@ npm run e2e -- --attach-videos-on-success
 npm run vercel:prepare
 ```
 
-Use `npm run test:report` to build the combined report without preparing the Vercel output, then `npm run test:report:open` to serve it locally.
+Usá `npm run test:report` para generar el reporte combinado sin preparar la salida para Vercel, y después `npm run test:report:open` para servirlo en local.
 
-The staged output serves the combined `e2e`, `server`, and `webview` Allure report at `/reports/allure/`; it does not include a standalone webview preview. GitHub Actions creates a Vercel Preview deployment only for same-repository pull requests targeting `main`. The deploy job expects `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID` secrets and skips fork pull requests.
+La salida preparada sirve el reporte combinado de Allure de `e2e`, `server` y `webview` en `/reports/allure/`; no incluye una vista previa standalone del webview. GitHub Actions crea un deploy de Vercel Preview solo para pull requests del mismo repositorio que apunten a `main`. El job de deploy espera los secretos `VERCEL_TOKEN`, `VERCEL_ORG_ID` y `VERCEL_PROJECT_ID` y se saltea los pull requests de forks.
 
-## Troubleshooting
+## Solución de problemas
 
-- **Standalone will not start:** verify Node.js 20+, omit `--port` to choose a free port, or select another fixed port.
-- **An agent is missing:** confirm **Settings → Instant Detection (Hooks)** is on and that the session belongs to the current workspace. Enable **Watch All Sessions** if needed.
-- **The UI looks disconnected:** open **Settings → Debug View** to inspect the server connection, transcript path, and latest agent data.
-- **Extension and standalone are both running:** this is supported. Current versions create separate files under `~/.pixel-agents/servers/`; stopping one does not remove the other.
+- **El standalone no arranca:** verificá que tengas Node.js 20+, omití `--port` para que elija un puerto libre, o elegí otro puerto fijo.
+- **Falta un agente:** confirmá que **Settings → Instant Detection (Hooks)** esté activado y que la sesión pertenezca al workspace actual. Activá **Watch All Sessions** si hace falta.
+- **La UI parece desconectada:** abrí **Settings → Debug View** para inspeccionar la conexión con el servidor, la ruta del transcript y los últimos datos del agente.
+- **La extensión y el standalone están corriendo a la vez:** está soportado. Las versiones actuales crean archivos separados en `~/.pixel-agents/servers/`; detener uno no elimina al otro.
+- **La app de escritorio no abre:** verificá que exista `dist/cli.js` (corré `npm run build` en la raíz) y que hayas hecho `npm install` dentro de `desktop/`.
 
-## Community & Contributing
+## Comunidad y contribuciones
 
-Join the [Discord](https://discord.gg/Yk7jXebv9H) to chat with other users and follow development. Use [Issues](https://github.com/pixel-agents-hq/pixel-agents/issues) to report bugs or request features, and [Discussions](https://github.com/pixel-agents-hq/pixel-agents/discussions) for questions and ideas.
+Sumate al [Discord](https://discord.gg/Yk7jXebv9H) para charlar con otros usuarios y seguir el desarrollo. Usá los [Issues](https://github.com/pixel-agents-hq/pixel-agents/issues) para reportar bugs o pedir funcionalidades, y las [Discussions](https://github.com/pixel-agents-hq/pixel-agents/discussions) para preguntas e ideas.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request and read our [Code of Conduct](CODE_OF_CONDUCT.md) before participating.
+Leé [CONTRIBUTING.md](CONTRIBUTING.md) antes de abrir un pull request y nuestro [Código de Conducta](CODE_OF_CONDUCT.md) antes de participar.
 
-## Supporting the Project
+## Apoyar el proyecto
 
 <a href="https://github.com/sponsors/pablodelucca">
   <img src="https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?logo=github" alt="GitHub Sponsors">
@@ -222,16 +289,18 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request and read ou
   <img src="https://img.shields.io/badge/Support-Ko--fi-ff5e5b?logo=ko-fi" alt="Ko-fi">
 </a>
 
-## Star History
+_(Los enlaces de apoyo corresponden al autor del proyecto original.)_
+
+## Historial de estrellas
 
 <a href="https://www.star-history.com/?repos=pixel-agents-hq%2Fpixel-agents&type=date&legend=bottom-right">
  <picture>
    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=pixel-agents-hq/pixel-agents&type=date&theme=dark&legend=bottom-right&sealed_token=Vn3YGMuZ_HFZAf56zIUQGCBJDYtDq38sOReKlcxWklxR_ilwVLynb7CPraf5uPhnAU7fwHXXoO88tzLkq9tpEYIExl4N8tcXOmu0ehAXPu5DdXNwjixYsxb00LSfeJ25f_jLkcZcTpRKLKYOb9p4_dR1jjAyrWDs7aicdbqejaDtLcVyj-oSoKkBfrS5" />
    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=pixel-agents-hq/pixel-agents&type=date&legend=bottom-right&sealed_token=Vn3YGMuZ_HFZAf56zIUQGCBJDYtDq38sOReKlcxWklxR_ilwVLynb7CPraf5uPhnAU7fwHXXoO88tzLkq9tpEYIExl4N8tcXOmu0ehAXPu5DdXNwjixYsxb00LSfeJ25f_jLkcZcTpRKLKYOb9p4_dR1jjAyrWDs7aicdbqejaDtLcVyj-oSoKkBfrS5" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=pixel-agents-hq/pixel-agents&type=date&legend=bottom-right&sealed_token=Vn3YGMuZ_HFZAf56zIUQGCBJDYtDq38sOReKlcxWklxR_ilwVLynb7CPraf5uPhnAU7fwHXXoO88tzLkq9tpEYIExl4N8tcXOmu0ehAXPu5DdXNwjixYsxb00LSfeJ25f_jLkcZcTpRKLKYOb9p4_dR1jjAyrWDs7aicdbqejaDtLcVyj-oSoKkBfrS5" />
+   <img alt="Gráfico de historial de estrellas" src="https://api.star-history.com/chart?repos=pixel-agents-hq/pixel-agents&type=date&legend=bottom-right&sealed_token=Vn3YGMuZ_HFZAf56zIUQGCBJDYtDq38sOReKlcxWklxR_ilwVLynb7CPraf5uPhnAU7fwHXXoO88tzLkq9tpEYIExl4N8tcXOmu0ehAXPu5DdXNwjixYsxb00LSfeJ25f_jLkcZcTpRKLKYOb9p4_dR1jjAyrWDs7aicdbqejaDtLcVyj-oSoKkBfrS5" />
  </picture>
 </a>
 
-## License
+## Licencia
 
-Pixel Agents is available under the [MIT License](LICENSE).
+Pixel Agents está disponible bajo la [Licencia MIT](LICENSE).
