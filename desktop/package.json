@@ -1,0 +1,25 @@
+{
+  "name": "pixel-agents-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Desktop window for the Pixel Agents standalone server",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.pepewapo.pixel-agents-desktop",
+    "productName": "Pixel Agents",
+    "directories": { "output": "release" },
+    "files": ["main.cjs", "package.json"],
+    "extraResources": [
+      { "from": "../dist", "to": "app-dist", "filter": ["**/*", "!extension.js*", "!uninstall.js*"] }
+    ],
+    "win": { "icon": "../icon.png", "target": ["portable"] }
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.0"
+  }
+}
